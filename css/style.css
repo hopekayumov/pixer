@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
 
 :root {
     --button-light-blue: #00BAFC;
@@ -38,15 +38,21 @@ body {
 }
 .nav-list__link {
     text-decoration: none;
-    font-family: 'Open Sans', sans-serif;
     color: #000;
 }
 .btn {
     padding: 8px 16px;
     border-radius: 5px;
     background-color: var(--button-light-blue);
-    color: #fff;
     text-decoration: none;
+    font-family: 'Open Sans';
+    font-weight: 700;
+    color: #fff;
+    text-align: center;
+    
+}
+.btn:hover {
+    
 }
 /* MAIN */
 .next-level {
@@ -57,18 +63,88 @@ body {
     align-items: center;
     justify-content: space-between;
 }
-.title-text {
+.bio-text {
     width: 470px;
     margin-right: 50px;
 }
-.title {
-    font-family: Open Sans;
-    font-style: normal;
-    font-weight: bold;
+.next-title {
+    font-weight: 700;
     font-size: 30px;
     line-height: 130%;
     margin-bottom: 16px;
+    
 }
-.next-text {
+.next-info {
     margin-bottom: 24px;
-  } 
+} 
+/* SERIVCES SECTION */
+.services {
+    padding: 56px 100px;
+  }
+.main-title{
+    text-align: center;
+    margin-top: 50px;
+}
+.main-title__item {
+    font-weight: 700;
+    font-size: 24px;
+    line-height: 130%;
+    margin-bottom: 16px;
+}
+.main-title p {
+    width: 720px;
+    margin-left: auto;
+    margin-right: auto;
+    
+}
+.services-cards-top{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 24px;
+}
+.services-cards-bottom{
+    margin-top: 48px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.service-card {
+    padding: 24px 58px;
+    margin-right: 70px;
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    border-radius: 5px;
+}
+.service-card:hover {
+  box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1);
+}
+.service-card:active {
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.medium-title{
+    margin-bottom: 16px;
+    font-weight: bold;
+    font-size: 20px;
+    line-height: 130%;
+    text-align: center;
+}
+.service-card p{
+    text-align: center;
+}
+.services-links{
+    margin-top: 47px;
+    text-align: center;
+}
+.services-link{
+    margin-left: 16px;
+    color: #00BAFC;
+}
+.how-work {
+    padding: 56px 234px;
+}
+.large-cards{
+    display: flex;
+    align-items: center;
+    width: 832px;
+    margin: auto;
+}
