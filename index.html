@@ -11,132 +11,41 @@
    <!-- Open Sans Font -->
    <link rel="preconnect" href="https://fonts.gstatic.com">
    <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap" rel="stylesheet">
+   <!-- Normalize css -->
+   <link rel="stylesheet" href="https://necolas.github.io/normalize.css/8.0.1/normalize.css">
 </head>
-
 <body>
-   <!-- HEADER -->
-   <header class="top-header">
-      <div class="container">
-         <div class="nav-header">
-            <div class="logo">
-               <a href=""><img src="./img/Слой 1.png" alt=""></a>
-            </div>
-            <ul class="nav-list">
-               <li class="nav-list__item"><a href="" class="nav-list__link">Main</a></li>
-               <li class="nav-list__item"><a href="" class="nav-list__link">Services</a></li>
-               <li class="nav-list__item"><a href="" class="nav-list__link">Portfolio</a></li>
-               <li class="nav-list__item"><a href="" class="nav-list__link">Team</a></li>
-               <li class="nav-list__item"><a href="" class="nav-list__link">Blog</a></li>
-               <li class="nav-list__item"><a href="" class="nav-list__link">Contacts</a></li>
-               <li class="nav-list__item"><a href="tel:+998939781332"
-                     class="nav-list__link  btn phone">+998(93)978-13-32</a></li>
+<!-- site-header -->
+   <header class="site-header">
+      <div class="site-header__container container">
+         <a href="#" class="site-header__logo logo">
+            <img class="logo__img"src="./img/Слой 1.png" alt="pixer logo" width="58" height="20"> 
+         </a>
+         <nav class="site-nav">
+            <ul class="site-nav__list">
+               <li class="site-nav__item"><a href="#" class="site-nav__link">Main</a></li>
+               <li class="site-nav__item">
+                  <a href="#" class="site-nav__link">Services</a>
+                  <ul class="dropdown-menu">
+                     <li><a href="blank.html">Web Site</a></li>
+                     <li><a href="blank.html">Telegram bot</a></li>
+                     <li><a href="blank.html">SMM </a></li>
+                     <li><a href="blank.html">Graphic Design</a></li>
+                     <li><a href="blank.html">CRM service</a></li> 
+                  </ul>
+               </li>
+               <li class="site-nav__item"><a href="#" class="site-nav__link">Portfolio</a></li>
+               <li class="site-nav__item"><a href="#" class="site-nav__link">Team</a></li>
+               <li class="site-nav__item"><a href="#" class="site-nav__link">Blog</a></li>
+               <li class="site-nav__item"><a href="#" class="site-nav__link">Contacts</a></li>
             </ul>
-         </div>
+         </nav>
+         <a href="tel:+998939781332" class="site-header__phone button button-primary">+998(93)978-13-32</a>
       </div>
    </header>
-   <!-- MAIN -->
-   <main>
-      <!-- NEXT LEVEL -->
-      <section class="next-level container">
-         <div class="next-level-content">
-            <div class="bio-text">
-               <h1 class="next-title">Upgrade your Bussines next level</h1>
-               <p class="next-info">Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi, eveniet
-                  reprehenderit eaque nemo fugiat ut sit inventore id odio voluptatibus, laudantium, libero esse.</p>
-               <a href="#" class="btn next-btn">View Service</a>
-            </div>
-            <iframe style="border-radius: 5px;" width="458" height="260" src="https://www.youtube.com/embed/bG-AL2Hd6Cc"
-               title="YouTube video player" frameborder="0"
-               allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
-               allowfullscreen></iframe>
-         </div>
-      </section>
-      <section class="services container">
-         <div class="main-title">
-            <h1 class="main-title__item">Services</h1>
-            <p class="main-title__info">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Sapiente maiores consectetur nihil non, perferendis earum. Repellendus suscipit aliquid sit illum rerum excepturi sapiente</p>
-         </div>
 
-         <div class="services-cards-top">
-            <div class="service-card">
-               <img src="./img/Screenshot_3.png" alt="Besayt tuzish" class="card-image" width="202" height="130">
-               <h3 class="service-title">Landing Page</h3>
-               <p class="text">lorem ipsum</p>
-            </div>
-            <div class="service-card">
-               <img src="./img/Screenshot_4.png" alt="Telegram bot yasash" class="card-image" width="202" height="130">
-               <h3 class="service-title">Telegram bot</h3>
-               <p class="text">lorem ipsum</p>
-            </div>
-            <div class="service-card">
-               <img src="./img/Screenshot_5.png" alt="Smm xizmatlari" class="card-image" width="202" height="130">
-               <h3 class="service-title">SMM</h3>
-               <p class="text">lorem ipsum</p>
-            </div>
-         </div>
-         <div class="services-cards-bottom">
-            <div class="service-card">
-               <img src="./img/Screenshot_7.png" alt="Grafik dizayn" class="card-image" width="202" height="130">
-               <h3 class="service-title">Graphic Design</h3>
-               <p class="text">lorem ipsum</p>
-            </div>
-            <div class="service-card">
-               <img src="./img/Screenshot_6.png" alt="Crm tizimlar" class="card-image" width="202" height="130">
-               <h3 class="service-title">CRM systems</h3>
-               <p class="text">lorem ipsum</p>
-            </div>
-         </div>
-         <div class="services-links">
-            <a href="#" class="btn">Order now</a>
-            <a href="#" class="services-link">View Service page</a>
-         </div>
-      </section>
-      <section class="how-we-work container">
-         <div class="work-title">
-             <h2 class="main-title">How we work</h2>
-             <p class="main-info">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis lacinia ex, eget sollicitudin massa pellentesque in. Vivamus mattis eros at sem pulvinar</p>
-         </div>
-         <div class="advantages right">
-             <img class="advantages-img" src="./img/Screenshot_8.png" alt="Talablarni aniqlaymiz" width="300" height="277">
-             <div class="advantages-content">
-                 <p class="advantages-title work">We will define the requirements</p>
-                 <p class="text">Nullam laoreet nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
-             </div>
-         </div>
-         <div class="advantages left">
-             <img class="advantages-img" src="./img/Screenshot_9.png" alt="koplab yechimlar" width="300" height="225">
-             <div class="advantages-content">
-                 <p class="advantages-title work">Usefull advise</p>
-                 <p class="text">nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
-             </div>
-         </div>
-         <div class="advantages right">
-             <img class="advantages-img" src="./img/Screenshot_10.png" alt="Loyiga vaqti" width="300" height="259">
-             <div class="advantages-content">
-                 <p class="advantages-title work">Finish on time</p>
-                 <p class="text">nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
-             </div>
-         </div>
-         <div class="advantages left">
-             <img class="advantages-img" src="./img/Screenshot_11.png" alt="alo sifat" width="300" height="171">
-             <div class="advantages-content">
-                 <p class="advantages-title work">Best quality</p>
-                 <p class="text">nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
-             </div>
-         </div>
-         <div class="advantages right">
-             <img class="advantages-img" src="./img/Screenshot_12.png" alt="Qolab quvvatlash" width="300" height="232">
-             <div class="advantages-content">
-                 <p class="advantages-title work">Support every time</p>
-                 <p class="text">nec turpis et ultrices. Duis sit amet quam arcu. Nam facilisis</p>
-             </div>
-         </div>
-         <div class="services-links">
-             <a href="#" class="btn">Order now</a>
-         </div>
-     </section>
-     
-   </main>
+
+<script src="js/script.js"></script>
 </body>
 
 </html>
