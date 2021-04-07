@@ -33,6 +33,13 @@ body {
     display: flex;
     align-items: center;
 }
+.logo:hover {
+    opacity: 0.8;
+}
+.logo:active {
+    opacity: 0.4;
+}
+
 .site-header__logo {
     margin-right: auto;
 }
@@ -57,8 +64,14 @@ body {
     text-decoration: none;
     transition: box-shadow 0.3s ease ;
 }
-.site-nav__link:hover {
+.site-nav__link:hover,
+.site-nav__item--active .site-nav__link {
     box-shadow: inset 0 -3px 0 0 var(--text-color);
+}
+.site-nav__link:active {
+    background-color: rgba(25, 25, 25, 0.7);
+    box-shadow: none;
+    color: #fff;
 }
 .site-nav__item ul {
     display: none;
