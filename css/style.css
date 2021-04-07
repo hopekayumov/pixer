@@ -8,11 +8,13 @@
 html {
     box-sizing: border-box;
 }
+
 *,
 *::before,
 *::after {
     box-sizing: inherit;
 }
+
 body {
     font-family: "Open Sans", sans-serif;
     font-size: 16px;
@@ -20,12 +22,41 @@ body {
     background-color: #fff;
     color: var(--text-color);
 }
+
+/* container */
 .container {
     max-width: 1150px;
     padding-left: 25px;
     padding-right: 25px;
     margin: 0 auto;
 }
+/* button */
+.button {
+    display: inline-block;
+    padding: 8px 16px;
+    border-radius: 5px;
+    white-space: nowrap;
+    text-decoration: none;
+    font-weight: bold;
+}
+.button-phone {
+    padding: 5px 13px;
+    border: 3px solid transparent;
+    background-color: var(--accent-color);
+    color: #fff;
+}
+
+.button-phone:hover {
+    background-color: #fff;
+    border-color: var(--accent-color);
+    color: var(--accent-color);
+}
+.button-phone:active {
+    background-color: var(--accent-color);
+    color: #fff;
+    opacity: 0.6;
+}
+/* site-header */
 .site-header {
     box-shadow: 0px 4px 20px rgba(0, 0 , 0, 0.1);
 }
@@ -33,11 +64,16 @@ body {
     display: flex;
     align-items: center;
 }
+/* logo */
 .logo:hover {
     opacity: 0.8;
 }
 .logo:active {
     opacity: 0.4;
+}
+
+.logo__img {
+    display: block;  
 }
 
 .site-header__logo {
@@ -46,9 +82,7 @@ body {
 .site-header__phone {
     margin-left: 8px;
 }
-.logo__img {
-  display: block;  
-}
+
 /* site-nav */
 .site-nav__list {
     display: flex;
@@ -56,6 +90,10 @@ body {
     padding: 0;
     margin: 0;
     list-style: none;
+}
+.site-nav__item {
+    position: relative;
+    z-index: 1;
 }
 .site-nav__link {
     display: block;
@@ -73,14 +111,40 @@ body {
     box-shadow: none;
     color: #fff;
 }
-.site-nav__item ul {
-    display: none;
+.site-nav__item:hover .dropdown-menu {
+    display: block;
 }
+
+/* dropdown */
 .dropdown-menu {
-    padding: 0;
+    display: none;
+    position: absolute;
+    z-index: 3;
+    left: 50%;
+    top: 100%;
+    transform: translateX(-50%);
+    padding-left: 0;
+    padding-top: 8px;
+    padding-bottom: 8px;
     margin: 0;
     list-style: none;
+    background-color: #fff;
+   
+    border-radius: 5px;
+    box-shadow: 0px 4px 24px rgba(0, 0, 0, 0.1);
 }
 .dropdown-menu a {
+    display: block;
+    padding: 8px 16px;
     text-decoration: none;
+    color: var(--text-color);
+    white-space: nowrap;
+    
+}
+.dropdown-menu a:hover {
+    background-color: var(--accent-color);
+    color: var(--text-color);
+}
+.dropdown-menu a:active {
+    opacity: 0.6;
 }
