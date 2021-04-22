@@ -4,9 +4,12 @@
     /* colors */
     --text-color: #191919;
     --accent-color: #00bafc;
+    --accent-color-80: rgb(0, 186, 252, 0.8); 
+    --accent-color-60: rgb(0, 186, 252, 0.6); 
 }
 html {
     box-sizing: border-box;
+    scroll-behavior: smooth;
 }
 
 *,
@@ -22,6 +25,17 @@ body {
     background-color: #fff;
     color: var(--text-color);
 }
+.vusually-hidden {
+    position: absolute;
+
+    width: 1px;
+    height: 1px;
+    margin: -1px;
+    border: 0;
+    padding: 0;
+    clip: rect(0 0 0 0);
+    overflow: hidden;
+}
 
 /* container */
 .container {
@@ -34,6 +48,7 @@ body {
 .button {
     display: inline-block;
     padding: 8px 16px;
+    border: none;
     border-radius: 5px;
     white-space: nowrap;
     text-decoration: none;
@@ -44,6 +59,16 @@ body {
     border: 3px solid transparent;
     background-color: var(--accent-color);
     color: #fff;
+}
+.button-primary {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+.button-primary:hover {
+    background-color: var(--accent-color-80);
+}
+.button-primary:active {
+    background-color: var(--accent-color-60);
 }
 
 .button-phone:hover {
@@ -59,6 +84,12 @@ body {
 /* site-header */
 .site-header {
     box-shadow: 0px 4px 20px rgba(0, 0 , 0, 0.1);
+    position: fixed;
+    left: 0;
+    top: 0;
+    z-index: 20;
+    width: 100%;
+    background-color: #fff;
 }
 .site-header__container {
     display: flex;
@@ -102,6 +133,8 @@ body {
     text-decoration: none;
     transition: box-shadow 0.3s ease ;
 }
+
+    
 .site-nav__link:hover,
 .site-nav__item--active .site-nav__link {
     box-shadow: inset 0 -3px 0 0 var(--text-color);
@@ -147,4 +180,322 @@ body {
 }
 .dropdown-menu a:active {
     opacity: 0.6;
+}
+/* Hero */
+.hero {
+    padding: 80px 0;
+}
+.hero__container {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+.hero__info {
+    width: 460px;
+}
+.hero__heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 30px;
+    line-height: 1.3;
+}
+.hero__text {
+    margin-top: 0;
+    margin-bottom: 16px;
+    margin-right: 40px;
+}
+.hero__video {
+    width: 458px;
+    height: 258px;
+    border-radius: 5px;
+}
+/* Site section*/
+.site-section {
+    padding-top: 56px;
+    padding-bottom: 56px;
+}
+
+.site-section-accent {
+    background-color: var(--accent-color);
+    color: #fff;
+}
+.site-section__heading {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 24px;
+    line-height: 1.3;
+    text-align: center;
+}
+.site-section__info {
+    margin-top: 0;
+    max-width: 720px;
+    margin: 0 auto 16px;
+    text-align: center;
+}
+/* Index Services */
+.index-services__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding: 0;
+    margin: 0; 
+    margin-left: -70px;
+    list-style-type: none;
+}
+.index-services__item {
+    width: 320px;
+    margin-left: 70px;
+    margin-bottom: 48px;
+}
+.section-btns {
+   margin-left: 360px;
+}
+.offer {
+    margin-left: 17px;
+    color: #00BAFC;
+    font-size: 16px;
+}
+/* Index Service */
+.index-service__link {
+    display: block;
+    padding: 20px;
+    border-radius: 5px;
+    overflow: hidden;
+    background-color: #fff;
+    color: var(--text-color);
+    box-shadow: 0px 8px 8px rgba(0, 0, 0, 0.1);
+    text-decoration: none;
+    text-align: center;
+    transition: box-shadow 0.2s ease;
+}
+.index-service__link:hover {
+    box-shadow: 0px 12px 21px rgba(0, 0, 0, 0.1);
+}
+.index-service__link:active {
+    box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.2);
+}
+.index-service__link::before {
+    content: "";
+    display: block;
+    height: 130px;
+    margin-bottom: 16px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+}
+.index-service--website .index-service__link::before {
+    background-image: url("../img/Screenshot_3.png");
+}
+.index-service--telegram-bot .index-service__link::before {
+    background-image: url("../img/Screenshot_4.png");
+}
+.index-service--smm .index-service__link::before {
+    background-image: url("../img/Screenshot_5.png");
+}
+.index-service--graphic .index-service__link::before {
+    background-image: url("../img/Screenshot_7.png");
+}
+.index-service--crm .index-service__link::before {
+    background-image: url("../img/Screenshot_6.png");
+}
+.index-service__title {
+    margin-top: 0;
+    margin-bottom: 16px;
+    font-size: 20px;
+    line-height: 1.3;
+}
+.index-service__info {
+    margin: 0;
+}
+
+/* How we work */
+
+.how-we-work__list {
+    max-width: 830px;
+    padding: 0;
+    margin: 8px auto 0;
+    list-style-type: none;
+}
+.how-we-work__item {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+}
+
+.how-we-work__item:nth-child(even) {
+    flex-direction: row-reverse;
+}
+
+.how-we-work__item:not(:last-child) {
+    margin-bottom: 48px;
+}
+
+.how-we-work__item::before {
+    content: "";
+    width: 300px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-position: center center;
+}
+
+.how-we-work__item--requirements::before {
+     height: 278px;
+     background-image: url("../img/Screenshot_8.png");
+}
+.how-we-work__item--offers::before {
+    height: 224px;
+    background-image: url("../img/Screenshot_9.png");
+}
+.how-we-work__item--deadline::before {
+    height: 258px;
+    background-image: url("../img/Screenshot_10.png");
+}
+.how-we-work__item--quality::before {
+    height: 171px;
+    background-image: url("../img/Screenshot_11.png");
+}
+.how-we-work__item--support::before {
+    height: 232px;
+    background-image: url("../img/Screenshot_12.png");
+}
+
+how-we-work__details {
+    width: 500px;
+}
+
+.how-we-work__title {
+    margin-top: 0;
+    margin-bottom: 8px;
+    font-size: 20px;
+    line-height: 1.3;
+}
+
+.how-we-work__info {
+    margin: 0;
+}
+.site-section__actions {
+    display: flex;
+    justify-content: center;
+}
+
+/* form */
+.order-form {
+    max-width: 350px;
+    margin-left: auto;
+    margin-right: auto;
+    background-color: #fff;
+    padding: 24px;
+    border-radius: 5px;
+    text-align: center;
+}
+.order-form__group {
+    margin-bottom: 16px;
+}
+.order-form__input {
+    display: block;
+    width: 100%;
+    padding: 16px;
+    border: none;
+    border-radius: 5px;
+    color: #191919;
+    background-color: #f3f3f3;
+}
+
+
+/* Footer */
+
+.site-footer {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    background-color: var(--text-color);
+    color: #fff;
+}
+.site-footer__container {
+    display: flex;
+    margin-right: 100px;
+}
+.site-footer__info {
+    width: 320px;
+    margin-right: 100px;
+    margin-left: 50px;
+}
+.site-footer__heading {
+    margin-top: 0;
+    font-size: 20px;
+    line-height: 26px;
+    font-weight: bold;
+    margin-bottom: 16px;
+}
+.site-footer__nav {
+    width: 150px;
+    margin-right: 80px;
+}
+.site-footer-web__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.site-footer__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+.site-footer__list {
+    margin: 0;
+    padding: 0;
+    list-style-type: none;
+}
+.site-footer__link {
+    text-decoration: none;
+    color: #fff;
+}
+.site-footer-web__item:not(:last-child) {
+    margin-bottom: 8px;
+}
+.site-footer-web__link {
+    display: inline-flex;
+    align-items: center;
+    text-decoration: none;
+    color: #fff;
+}
+.site-footer-web__link:hover {
+    color: var(--accent-color);
+}
+.site-footer__link:hover {
+    color: var(--accent-color);
+}
+.site-footer__link:active {
+    opacity: 0.6;
+}
+
+.site-footer-web__link-telegram::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: 8px;
+
+    background-image: url(../img/telegram.svg);
+}
+.site-footer-web__link-facebook::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: 8px;
+
+    background-image: url(../img/facebook.svg);
+}
+.site-footer-web__link-instagram::before {
+    content: "";
+    width: 22px;
+    height: 22px;
+    background-repeat: no-repeat;
+    background-position: center center;
+    background-size: contain;
+    margin-right: 8px;
+    
+    background-image: url(../img/instagram.svg);
 }
